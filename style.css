@@ -1,0 +1,149 @@
+* {
+  padding: 0%;
+  margin: 0%;
+}
+
+main {
+  display: flex;
+}
+
+.bg {
+  background-image: url(./quiz.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 30vw;
+}
+
+.body {
+  background-color: #2596be;
+  width: 70vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quiz {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 90vh;
+  width: 50vw;
+  border-radius: 30px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  display: none;
+}
+
+.head {
+  padding: 50px 0px;
+  text-align: center;
+}
+
+.head button {
+  background-color: #11110f;
+  color: #f8cd0c;
+  height: 50px;
+  width: 40vw;
+  border-radius: 30px;
+  border: none;
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.quizSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 50vh;
+  width: 40vw;
+  border-top: 1px solid #11110f;
+  border-bottom: 1px solid #11110f;
+}
+
+p {
+  margin-top: 20px;
+}
+
+.options {
+  display: flex;
+  width: 40vw;
+  height: 20vh;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.options button {
+  background-color: #11110f;
+  color: #f8cd0c;
+  width: 18vw;
+  min-height: 50px;
+  height: fit-content;
+  border-radius: 30px;
+  border: none;
+}
+
+.loader {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 10px solid white;
+  border-top: 10px solid blue;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.scoreDiv {
+  height: 200px;
+  width: 200px;
+  align-content: center;
+  justify-items: center;
+  display: none;
+  line-height: 50px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+@media only screen and (max-width: 800px) {
+  .bg {
+    display: none;
+  }
+
+  .body {
+    width: 100vw;
+  }
+
+  .quiz {
+    width: 90vw;
+  }
+
+  .quizSection {
+    width: 100%;
+    height: fit-content;
+    min-height: 50vh;
+  }
+
+  .options {
+    width: 100%;
+  }
+
+  .options button {
+    width: 45%;
+  }
+
+  .head {
+    padding: 30px 0px;
+  }
+
+  #questions {
+    font-size: 20px;
+    text-align: center;
+  }
+}
