@@ -2,8 +2,9 @@ const CACHE_NAME = "pwa-api-cache-v1";
 const urlsToCache = [
   "/", // Add your app's static assets here
   "/index.html",
-  "/styles.css",
-  "/app.js",
+  "/style.css",
+  "/quiz.js",
+  "/quiz.jpeg",
 ];
 
 // Install Event: Cache Static Files
