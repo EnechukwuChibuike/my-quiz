@@ -21,7 +21,11 @@ self.addEventListener("fetch", (event) => {
   const url = event.request.url;
 
   // Check if the request is for the API
-  if (url.includes("https://your-api-url.com")) {
+  if (
+    url.includes(
+      "https://opentdb.com/api.php?amount=50&category=9&difficulty=medium&type=multiple"
+    )
+  ) {
     event.respondWith(
       caches.open(CACHE_NAME).then((cache) =>
         fetch(event.request)
